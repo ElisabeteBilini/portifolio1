@@ -1,152 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizz Programação</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="content first-content">
-            <div class="first-column">
-                <h2 class="title title-primary">welcome back!</h2>
-                <p class="description description-primary">To keep connected with us</p>
-                <p class="description description-primary">please login with your personal info</p>
-                <button id="signin" class="btn btn-primary">sign in</button>
-            </div>    
-            <div class="second-column">
-                <h2 class="title title-second">create account</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>        
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
-                <p class="description description-second">or use your email for registration:</p>
-                <form class="form">
-                    <label class="label-input" for="">
-                        <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Name">
-                    </label>
-                    
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
-                    </label>
-                    
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
-                    </label>
-                    
-                    
-                    <button class="btn btn-second">sign up</button>        
-                </form>
-            </div><!-- second column -->
-        </div><!-- first content -->
-        <div class="content second-content">
-            <div class="first-column">
-                <h2 class="title title-primary">hello, friend!</h2>
-                <p class="description description-primary">Enter your personal details</p>
-                <p class="description description-primary">and start journey with us</p>
-                <button id="signup" class="btn btn-primary">sign up</button>
-            </div>
-            <div class="second-column">
-                <h2 class="title title-second">sign in to developer</h2>
-                <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div><!-- social media -->
-                <p class="description description-second">or use your email account:</p>
-                <form class="form">
-                
-                    <label class="label-input" for="">
-                        <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
-                    </label>
-                
-                    <label class="label-input" for="">
-                        <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
-                    </label>
-                
-                    <a class="password" href="#">forgot your password?</a>
-                    <button class="btn btn-second">sign in</button>
-                </form>
-            </div><!-- second column -->
-        </div><!-- second-content -->
-    </div>
-    <script src="js/app.js"></script>
-</body>
-</html>
-
-
-
-
-
-
-<!--<body>
-    <div class="footer-container">
-        <div class="footer">
-            <div class="footer-heading footer-1">
-                <h2>About us</h2>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-            </div>
-            <div class="footer-heading footer-2">
-                <h2>About us</h2>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-            </div>
-            <div class="footer-heading footer-3">
-                <h2>About us</h2>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-                <a href="#">Blog</a>
-            </div>
-
-        </div>
-    </div>
-</body>
-</html><div class="footer-email-form">
-    <h2>Join our newsletter</h2>
-    <input type="email" placeholder="Enter your email adress" id="footer-email">
-    <input type="submit" value="Sign Up" id="footer-email-btn">
+<h1 id="main-title">Quizz de programação</h1>
+<!-- SCORE BOARD -->
+<div id="score-container" class="hide">
+<h2>Parabéns</h2>
+<p id="display-score"><span>90</span>%</p>
+<p>Você acertou <span id="correct-answers">0</span> de <span id="questions-qty">10</span> perguntas</p>
+<button id="restart">Refazer quizz!</button>
+</div>
+<!-- QUIZZ CONTAINER -->
+<div id="quizz-container">
+<p id="question">
+<span id="question-number">1</span> - <span id="question-text">Qual é a unidade de medida para metros?</span>
+</p>
+<div id="answers-box">
+<button><span class="btn-letter">a</span> <span class="question-answer">m</span></button>
+<button><span class="btn-letter">b</span> <span class="question-answer">km</span></button>
+<button><span class="btn-letter">c</span> <span class="question-answer">ms</span></button>
+<button><span class="btn-letter">d</span> <span class="question-answer">r</span></button>
+</div>
 </div>
 
--->
+<!-- TEMPLATE RESPOSTA -->
+<button class="answer-template hide"><span class="btn-letter">a</span> <span class="question-answer">m</span></button>
+</body>
+</html>  
