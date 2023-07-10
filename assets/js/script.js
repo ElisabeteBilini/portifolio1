@@ -156,7 +156,7 @@
    const totalQuestions = questions.length;
    const percentage = (score / totalQuestions) * 100;
  
-   document.getElementById('display-score').textContent = `${percentage.toFixed(2)}%`;
+   document.getElementById('display-score').textContent = `${percentage}%`;
    document.getElementById('correct-answers').textContent = score;
    document.getElementById('questions-qty').textContent = totalQuestions;
  
