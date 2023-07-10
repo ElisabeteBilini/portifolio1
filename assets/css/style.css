@@ -87,6 +87,7 @@ label{
   border: 1px solid transparent;
   box-shadow: 0 0 10px #96d3da;
   padding: 5px 10px;
+  text-transform: capitalize;
 }
 
 .input-form:focus{
