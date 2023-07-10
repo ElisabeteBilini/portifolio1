@@ -73,6 +73,8 @@
      const j = Math.floor(Math.random() * (i + 1));
      [questions[i], questions[j]] = [questions[j], questions[i]];
    }
+   // Check number of questions
+   console.log(questions)
    return questions
  }
  
@@ -81,12 +83,19 @@
  // Variáveis
  let currentQuestion = 0;
  let score = 0;
+
+ const nextButton = document.getElementsByClassName('btn-next')[0];
+ 
  
  function displayQuestion() {
+  // Is displayQuestion being called?
+  console.log("I have been called")
   const questionElement = document.getElementById('title');
   const answersElements = document.getElementsByClassName('answers');
   const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
-
+  
+  nextButton.addEventListener('click', nextQuestion);
+  
   const current = questions[currentQuestion];
   questionElement.textContent = current.title;
 
@@ -99,6 +108,10 @@
 
   const questionNumber = currentQuestion + 1;
   numberQuestionElement.textContent = questionNumber <= 10 ? questionNumber : '';
+
+  // Check incrementing correctly:
+  console.log(questionNumber)
+  console.log(currentQuestion)
 }
  
  // Função para verificar a resposta
@@ -129,6 +142,11 @@
  
  // Avançar para a próxima pergunta ou encerrar o quiz
  function nextQuestion() {
+  nextButton.removeEventListener('click', nextQuestion);
+
+
+  // Is next question being called?
+  console.log("Next question is called")
    currentQuestion++;
  
    if (currentQuestion >= questions.length) {
@@ -190,13 +208,14 @@
  
  // Inicia o quiz
  function startQuiz() {
+  console.log("The game is started")
    displayQuestion();
  
    const totalQuestionsElement = document.getElementsByClassName('totalQuestions')[0];
    totalQuestionsElement.textContent = questions.length;
  
-   const nextButton = document.getElementsByClassName('btn-next')[0];
-   nextButton.addEventListener('click', nextQuestion);
+  //  const nextButton = document.getElementsByClassName('btn-next')[0];
+  //  nextButton.addEventListener('click', nextQuestion);
  
    const restartButton = document.getElementsByClassName('btn-exit')[0];
    restartButton.addEventListener('click', restartQuiz);
