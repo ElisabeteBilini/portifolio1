@@ -160,6 +160,9 @@
    document.getElementById('correct-answers').textContent = score;
    document.getElementById('questions-qty').textContent = totalQuestions;
  
+   const mainDiv = document.getElementsByClassName('main')[0];
+  mainDiv.classList.add('hidden');
+
    document.getElementById('hello').classList.add('hidden');
    document.getElementById('congrats').classList.remove('hidden');
  
