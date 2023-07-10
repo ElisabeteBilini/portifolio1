@@ -24,23 +24,24 @@ body{
 .login{
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
-  justify-content: center;
   background-color: #fff;
-  height: 80vh;
-  width: 30rem;
-  border-radius: 50px 0;
-  margin-top: 50px;
+  border-radius: 20px;
+  width: 300px;
+  margin: 50px auto;
+  padding: 25px;
 
 }
 
 .login h1{
-  font-size: 50px;
+  font-size: 45px;
   color: #000;
   padding-bottom: 1vh;
 }
 
-.logo{
+.logo,
+.logo-game{
   width: 10rem;
   animation: blink 1.2s linear infinite;
 }
@@ -72,6 +73,7 @@ body{
   align-items: center;
   color: #000;
   font-size: 20px;
+  padding-bottom: 10px;
 }
 
 label{
@@ -119,7 +121,7 @@ label{
   background-color: #fff;
   border-radius: 20px;
   width: 300px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 25px;
 }
 

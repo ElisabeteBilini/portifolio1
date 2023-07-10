@@ -2,6 +2,10 @@
 
  const btnInitial = document.querySelector('.initial-btn');
  const collectName = document.querySelector('.user');
+
+  const urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams.get('username'))
+  
  
      btnInitial.addEventListener('click', () => {
      const collectName = document.querySelector('.userName').value; 
@@ -162,6 +166,7 @@
    // Esconde o botão "Next"
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
+
  }
  
  // Reiniciar o quiz
@@ -188,7 +193,7 @@
    currentQuestion = 0;
    score = 0;
  
-   document.getElementById('hello').classList.remove('hidden');
+   document.getElementsByClassName('main')[0].classList.remove('hidden');
    document.getElementById('congrats').classList.add('hidden');
  
    const nextButton = document.getElementsByClassName('btn-next')[0];
@@ -196,6 +201,7 @@
  
    displayQuestion();
  }
+
  
  // Inicia o quiz
  function startQuiz() {
