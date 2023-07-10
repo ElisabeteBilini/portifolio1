@@ -13,7 +13,7 @@
  
  //-----------------------------------------GAME STRUCTURE---------------------------------------------------
  
- // Array de perguntas e respostas
+ // Array de perguntas e respostas 
  const questions = [
    {
      title: 'The Cold War was between the United States and what other world power?',
@@ -73,35 +73,35 @@
      const j = Math.floor(Math.random() * (i + 1));
      [questions[i], questions[j]] = [questions[j], questions[i]];
    }
+   return questions
  }
  
- // Embaralha as perguntas antes de iniciar o quiz
  shuffleQuestions();
  
- // Variáveis de controle
+ // Variáveis
  let currentQuestion = 0;
  let score = 0;
  
- // Função para exibir a pergunta atual e suas respostas
  function displayQuestion() {
-   const questionElement = document.getElementById('title');
-   const answersElements = document.getElementsByClassName('answers');
-   const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
-   
-   const current = questions[currentQuestion];
-   questionElement.textContent = current.title;
+  const questionElement = document.getElementById('title');
+  const answersElements = document.getElementsByClassName('answers');
+  const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
+
+  const current = questions[currentQuestion];
+  questionElement.textContent = current.title;
+
+  for (let i = 0; i < answersElements.length; i++) {
+    const answerElement = answersElements[i];
+    answerElement.textContent = current.answers[i];
+    answerElement.classList.remove('correct', 'incorrect');
+    answerElement.addEventListener('click', checkAnswer);
+  }
+
+  const questionNumber = currentQuestion + 1;
+  numberQuestionElement.textContent = questionNumber <= 10 ? questionNumber : '';
+}
  
-   for (let i = 0; i < answersElements.length; i++) {
-     const answerElement = answersElements[i];
-     answerElement.textContent = current.answers[i];
-     answerElement.classList.remove('correct', 'incorrect');
-     answerElement.addEventListener('click', checkAnswer);
-   }
-   
-   numberQuestionElement.textContent = currentQuestion + 1; // Atualiza o contador de perguntas
- }
- 
- // Função para verificar a resposta selecionada
+ // Função para verificar a resposta
  function checkAnswer(event) {
    const selectedAnswer = event.target;
    const selectedAnswerIndex = Array.from(selectedAnswer.parentElement.children).indexOf(selectedAnswer);
@@ -116,18 +116,18 @@
      correctAnswerElement.classList.add('correct');
    }
  
-   // Desabilita o clique nas respostas após verificar
+   // Desabilita o clique após verificacao
    const answersElements = document.getElementsByClassName('answers');
    for (let i = 0; i < answersElements.length; i++) {
      answersElements[i].removeEventListener('click', checkAnswer);
    }
  
-   // Mostra o botão "Next" após verificar a resposta
+   // Botão "Next"
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.remove('hidden');
  }
  
- // Função para avançar para a próxima pergunta ou finalizar o quiz
+ // Avançar para a próxima pergunta ou encerrar o quiz
  function nextQuestion() {
    currentQuestion++;
  
@@ -138,7 +138,7 @@
    }
  }
  
- // Função para finalizar o quiz
+ // Encerrar o quiz
  function finishQuiz() {
    const totalQuestions = questions.length;
    const percentage = (score / totalQuestions) * 100;
@@ -150,12 +150,12 @@
    document.getElementById('hello').classList.add('hidden');
    document.getElementById('congrats').classList.remove('hidden');
  
-   // Esconde o botão "Next" após finalizar o quiz
+   // Esconde o botão "Next"
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
  }
  
- // Função para reiniciar o quiz
+ // Reiniciar o quiz
  function restartQuiz() {
    currentQuestion = 0;
    score = 0;
@@ -169,12 +169,12 @@
    displayQuestion();
  }
  
- // Função para sair do jogo
+ // Sair do jogo
  function exitGame() {
    window.close();
  }
  
- // Função para jogar novamente
+ // Jogar novamente
  function playAgain() {
    currentQuestion = 0;
    score = 0;
@@ -188,7 +188,7 @@
    displayQuestion();
  }
  
- // Inicialização do quiz
+ // Inicia o quiz
  function startQuiz() {
    displayQuestion();
  
@@ -210,7 +210,6 @@
    document.getElementById('footer-btn').classList.remove('hidden');
    document.getElementById('congrats-btn').classList.add('hidden');
  }
- 
- // Inicia o quiz quando a página é carregada
+
  window.addEventListener('load', startQuiz);
  
