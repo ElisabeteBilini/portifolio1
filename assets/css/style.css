@@ -384,6 +384,10 @@ display: none;
     padding: 5px 10px;
     font-size: 20px;
   }
+
+  #exit{
+    display: none;
+  }
   
   #congrats{
     width: 19rem;
