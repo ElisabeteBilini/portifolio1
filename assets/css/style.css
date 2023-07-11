@@ -222,7 +222,7 @@ ul{
 #congrats {
   height: 40vh;
   width: 600px;
-
+  background-color: #fff;
   border-radius: 25px;
   justify-content: center;
   color: #000;
@@ -232,19 +232,23 @@ ul{
 #congrats h2 {
   font-size: 50px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 15px;
   color: #c7880a;
 }
 
 #congrats p {
   text-align: center;
   font-size: 30px;
-  padding-top: 10px
+  padding-top: 5px
 }
 
 #congrats-btn {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+gap: 50px;
 text-align: center;
-padding-top: 40px;
+padding: 10px 15px;
 }
 
 #congrats-btn a, #footer-btn a{
