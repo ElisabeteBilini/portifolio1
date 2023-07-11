@@ -283,15 +283,13 @@ display: none;
 /* Mobiles */
 @media screen and (max-width: 480px) {
   .login{
-    width: 18rem;
+    width: 15rem;
     display: flex; 
     justify-content: center;
-    height: 95vh;
     margin-bottom: 10px;
     margin-top: 5px;
   }
   
-    
   .login h1 {
     font-size: 35px;
     padding-bottom: 15px;
@@ -305,7 +303,6 @@ display: none;
   #hello{
     display: flex;
     flex-direction: column;
-    align-items: center;
     align-items: center;
     border-radius: 10px;
     width: 19rem;
@@ -330,9 +327,9 @@ display: none;
   }
     
   .initial-btn, .content a {
-    padding: 10px 20px;
-    font-size: 15px;
-    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-top: 5px;
   }
     
   /* game.html*/
@@ -354,7 +351,7 @@ display: none;
   }
   
   .logo-game{
-    width: 2.5rem;
+    width: 4rem;
   }
   
   #hello {
