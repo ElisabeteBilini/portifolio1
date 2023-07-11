@@ -152,6 +152,11 @@
 <li>Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.</li>
 </ul>
 </li>
+<li> <a href="miro.com" target="_blank" rel=”noopener”>Miro</a>
+<ul>
+<li>Used to create the flowchart.</li>
+</ul>
+</li>
 </ol>
 
 <h2>Testing</h2>
