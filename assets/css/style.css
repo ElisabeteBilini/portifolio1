@@ -280,7 +280,136 @@ display: none;
 }
 
 
-
+/* Mobiles */
+@media screen and (max-width: 480px) {
+  .login{
+    width: 18rem;
+    display: flex; 
+    justify-content: center;
+    height: 95vh;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  
+    
+  .login h1 {
+    font-size: 35px;
+    padding-bottom: 15px;
+  }
+    
+  .logo {
+    width: 8rem;
+    animation: blink 1.5s linear infinite;
+  } 
+  
+  #hello{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 19rem;
+    height: 80px;
+    font-size: 16px;
+    gap: 5px;
+  }
+  
+  #progress{
+    padding-bottom: 5px;
+  }
+    
+  .login p {
+    font-size: 18px;
+  }
+  #username-form {
+    font-size: 15px;
+  }
+    
+  .input-form {
+    font-size: 10px;
+  }
+    
+  .initial-btn, .content a {
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+    
+  /* game.html*/
+  main{
+        height: auto;
+        margin: 10px 20px;
+  } 
+  
+  header {
+    margin-top: unset;
+    font-size: 15px;
+    width: 19rem;
+    height: 50px;
+    border-radius: 10px;
+  }
+  
+  header h1{
+    font-size: 25px;
+  }
+  
+  .logo-game{
+    width: 2.5rem;
+  }
+  
+  #hello {
+    font-size: 14px;
+    justify-items: auto;
+    line-height: 5px;
+    height: 45px;
+    padding-left: 45px;
+  }
+  
+  #title {
+    width: 19rem;
+    font-size: 13px;
+    border-radius: 10px;
+    height: 50px;
+    line-height: 15px;
+  }
+    
+  .answers {
+    width: 19rem;
+    font-size: 12px;
+    border-radius: 10px;
+    height: 30px;
+  }
+    
+  #footer-btn{
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+  
+  #congrats{
+    width: 19rem;
+    height: auto;
+    margin-bottom: unset;
+    margin-top: unset;
+    border-radius: 10px;
+  }
+  
+  #congrats h2{
+    font-size: 25px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    color: #c7880a;
+  }
+  
+  #congrats p{
+    font-size: 16px;
+  }
+  
+  #display-score span, #display-score{
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+  
 
 
 /* Game - page 
