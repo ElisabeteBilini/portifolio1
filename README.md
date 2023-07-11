@@ -1,111 +1,316 @@
-https://elisabetebilini.github.io/quiz-programacao/
+<h1>Big Brain Quiz</h1>
+
+<p> Many people already know about educational quizzes, but few know their true potential.</p>
+<p>An educational quiz is a tool that can be used in a classroom, course, or for reviewing content in a teaching process.</p>
+<p>This game also has an evaluation method.</p>
+<p>We can say that quizzes are a practical way of learning, because this method assesses the degree of prior knowledge of a student on a given topic, as well as evaluating what is retained after entering the classroom in an interesting and innovative way.</p>
+<p>Visit our page by clicking here:
+<a href="https://elisabetebilini.github.io/BigBrainQuiz/"  target="_blank" rel=”noopener”> Big Brain Quiz</a>
+</p>
+<br>
+
+![Name here](assets/images/responsive.png)
+
+<br>
+
+<h2>User Experience</h2>
+<h3>User stories</h3>
+<ul>
+<li>First Time Visitor Goals</li>
+<ul>
+<li>As a first-time user, I want to easily understand the main goal of the game and how it works.</li>
+</ul>
+<ul>
+<li>That the messages are clear, and the responsiveness works correctly.</li>
+</ul>
+<ul>
+<li>That the content is not visually polluted and does not cause unexpected distractions.</li>
+</ul>
+</ul>
+<ul>
+<li>Returning Visitor Goals</li>
+<ul>
+<li>As a repeat visitor, I would like to switch order of questions and answers.</li>
+</ul>
+</ul>
+<ul>
+</ul>
+
+<h3>Design</h3>
+<ul>
+<li>Colour</li>
+<ul>
+<li>A summer color scheme has been used, happy yet calm colors that match the logo of the game very well.</li>
+<br>
+
+![Mobile Wireframe](assets/images/colors.png)
+</ul>
+</ul>
+<ul>
+<li>Typography</li>
+<ul>
+<li>The font selection was appropriate for the volume of text, as it helps reading with greater continuity and without so much eye strain.</li>
+</ul>
+</ul>
+<ul>
+<li>Imagery</li>
+<ul>
+<li>Only one background image is used, with light colors that refer to the questions theme, to keep a clean look, without visual pollution so that the user's focus is on the questionnaire.</li>
+</ul>
+</ul>
 
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h3>Wireframes</h3>
 
-Welcome ELISABETE L BILINI,
+<br>
+<p>Mobile Wireframe</p>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Mobile Wireframe](assets/images/Wireframe.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<br>
+<p>Home Page Wireframe</p>
 
-## Gitpod Reminders
+![Home Page Wireframe](assets/images/desktop.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<br>
 
-`python3 -m http.server`
+<h2>Features</h2>
 
-A blue button should appear to click: _Make Public_,
+<h3>Responsiveness</h3>
+<ul>
+<li>Viewports</li>
+<ul>
+<li>Desktop 1600px x 992px</li>
+<li>Laptop 1280px x 802px</li>
+<li>Tablet 768px x 1024px</li>
+<li>Mobile 320px x 480px</li>
+</ul>
+</ul>
 
-Another blue button should appear to click: _Open Browser_.
+<h3>Initial Page</h3>
+<ul>
+<li>Start screen containing name and logo, introduction about question content.</li>
+<li>It also has username input (required), a button to start the game and limited to 10 characters.</li>
+</ul>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![index](assets/images/Initial.png)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+<h3>Header Game</h3>
+<ul>
+<li>Start screen containing name and logo.</li>
+<li>Greeting the user who remains throughout the game and tracking the number of questions.</li>
+</ul>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![index](assets/images/header.png)
 
-To log into the Heroku toolbelt CLI:
+<h3>Game Page</h3>
+<ul>
+<li>Game screen with title and answers.</li>
+<li>If the selected answer is correct the background color will be green, if the wrong answer is selected the color will be red and the right answer will appear in green. </li>
+<li>Next button to advance the questions, restart button (returns to the first screen) and exit button (closes the browser, in the case of cell phones and tablets there is no this button).</li>
+</ul>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![index](assets/images/questions.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<h3>Message Congratulations</h3>
+<ul>
+<li>Final message containing percentage of hits, and how many questions you got correct.</li>
+<li>Play button again (restarts the game on the first question) and Exit game button (closes screen on browser and returns to home page on smaller screens).</li>
+</ul>
 
-------
+![index](assets/images/congratulations.png)
 
-## Release History
+<h2>Technologies Used</h2>
+<h3>Languages Used</h3>
+<ul>
+ <li>HTML</li>
+ <li>CSS</li>
+ <li>JavaScript</li>
+</ul>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<h3>Frameworks, Libraries & Programs Used</h3>
+<ol>
+<li> <a href="https://fonts.google.com/" target="_blank" rel=”noopener”>Google Fonts</a>
+<ul>
+<li>Google fonts were used to import the font for copleting the design.</li>
+</ul>
+</li>
+<li> <a href="https://balsamiq.com/" target="_blank" rel=”noopener”>Balsamic</a>
+<ul>
+<li>Balsamiq was used to create the wireframes during the design process.</li>
+</ul>
+</li>
+<li> <a href="https://github.com/" target="_blank" rel=”noopener”>GitHub</a>
+<ul>
+<li>GitHub is used to store the projects code after being pushed from Git.</li>
+</ul>
+</li>
+<li> <a href="https://git-scm.com/" target="_blank" rel=”noopener”>Git</a>
+<ul>
+<li>Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.</li>
+</ul>
+</li>
+</ol>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<h2>Testing</h2>
+<ul>
+<li> <a href="https://validator.w3.org/" target="_blank" rel=”noopener”>W3C Markup Validator</a></li>
+<li> <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank" rel=”noopener”>W3C CSS Validator</a></li>
+<li> <a href="https://codebeautify.org/jsvalidate" target="_blank" rel=”noopener”>Code Beautify (JavaScript Validator)</a></li>
+<li>Lighthouse (Chrome Developer Tools)</a></li>
+<br>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![index](assets/images/Lighthouse1.png)
+<br>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![index](assets/images/Lighthouse2.png)
+<br>
+</ul>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<h3>Testing User Stories from User Experience (UX) Section</h3>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<ul>
+<li>As a user, I want to consume content about world history, wars and politics.</li>
+<li>As a user, I want a site that is intuitive and easy to navigate.</li>
+<li>As a user, I want it to challenge me to improve my knowledge.</li>
+</ul>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<h3>Manual Testing</h3>
+<p>The manual test was done on a self-built desktop with an HP Pavilion Gaming Laptop, 16.1", Windows 10 Home, Intel® Core™ i5, 8GB RAM, 1TB HDD, NVIDIA® GeForce® GTX 1650 Ti</p>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+| Feature tested | Expected result                                    | Current results | Approved disapproved |
+| :---           |     :---:                                          |      :---:      |                 ---: |
+| Send username  |  Required User Collection.                          |   as expected   | To spend             |
+| Start button   |  When clicked, the survey page should open.        |   as expected   | To spend             |
+| Greetings to the user           |   Captures user name and displays it on the quiz screen along with a greeting. |   as expected   | To spend             |
+| Question Counting|  Shows the number of questions answered and the quiz total.  |   as expected   | To spend             |
+| Quiz|  Shows questions and answers on the screen, switching automatically after clicking on the answer.|   as expected   | To spend             |
+| Scoreboard|  Scores appear at the end of the quiz, showing the number and percentage of correct answers.|   as expected   | To spend             |
+| Check Answers|  Correct or Incorrect Response Message (tells you the correct answer).|   as expected   | To spend             |
+| Restart Button / Play Again Button|  Guides the user to the first question and resets the score to zero.|   as expected   | To spend             |
+| Exit Button|  In the browser, it closes the screen, and on the mobile screen, there is no button.|   as expected   | To spend             |
+| Final message|  Congratulates user, informs percentage and how many questions he got right.|   as expected   | To spend             |
+<br>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<h3>Browser Test</h3>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+| Browser Tested  | Work Status        |
+| ----------------|--------------------|
+| Microsoft Edge  |  Works as expected |
+| Chrome          |  Works as expected |
+| Firefox         |  Works as expected |
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<br>
+<h3>Device Test</h3>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+| Browser Tested              | Work Status        |
+| ----------------------------|--------------------|
+| Huawei Y5                   |  Works as expected |
+| Samsung Galaxy A12          |  Works as expected |
+<br>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<h3>Improvements to be Implemented</h3>
+<ul>
+<li>Insert Intermediate and Advanced Levels Sections</li>
+</ul>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<h3>Known Bugs</h3>
+<ul>
+<li>????????????????????</li>
+<ul>
+<li>????????????????????</li>
+</ul>
+</ul>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<h2>Deployment</h2>
+<h3>GitHub</h3>
 
-------
+<p></p>
+<h4></h4>
+<ol>
+<li>In the GitHub body of my page, click the menu button: repository;</li>
+<li>Locate the Big Brain Quiz project and click;</li>
+<li>Click on the button: settings;</li>
+<li>Click on the button: pages;</li>
+<li>Click on the button: visit the site.</li>
 
-## FAQ about the uptime script
+</ol>
+<h4>Cloning the GitHub Repository</h4>
+<ol>
+<li>On GitHub.com, navigate to the main page of the repository.</li>
+<li>To clone your repository using the command line using HTTPS, under "Quick setup", click in copying.  To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click in copying.</li>
+<li>Open Git Bash.</li>
+<li>Change the current working directory to the location where you want the cloned directory.</li>
+<li>Type git clone, and then paste the URL you copied earlier.</li>
+<li>Press Enter to create your local clone.</li>
+</ol>
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<h2>Credits</h2>
+<h3>Code</h3>
 
-**How will this affect me?**
+<ul>
+<li> <a href="https://stackoverflow.com/" target="_blank" rel=”noopener”>Stack Overflow</a>
+<ul>
+<li>Used to increment the code with the restriction function to capture only letters in the input (browser).</li>
+</ul>
+</li>
+<li> <a href="https://www.youtube.com/@CodiAcademytv" target="_blank" rel=”noopener”>Codi Academy TV</a>
+<ul>
+<li>Youtube channel in which I used the video / code as reference for this project.</li>
+</ul>
+</li>
+<li> <a href="https://codeinstitute.net/ie/" target="_blank" rel=”noopener”>Code Institute</a>
+<ul>
+<li>README references.</li>
+</ul>
+<ul>
+<li>The tutoring and assistance of Sara, who helped me figure out how to fix a bug in my code.</li>
+</ul>
+</li>
+<li> <a href="https://horadecodar.com.br/" target="_blank" rel=”noopener”>Hora de Codar</a>
+<ul>
+<li>Channel in Portuguese where I was able to remember some of the functions, and increase the code with the SHUFFLE function.</li>
+</ul>
+</li>
+</ul>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<h3>Content</h3>
+<ul>
+<li> <a href="https://www.worldhistory.org/" target="_blank" rel=”noopener”>World History Encyclopedia</a>
+<ul>
+<li>All historical content.</li>
+</ul>
+</li>
+</ul>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<h3>Media</h3>
+<ul>
+<li> <a href="https://br.freepik.com/" target="_blank" rel=”noopener”>Freepik</a>
+<ul>
+<li>Background image (question mark).</li>
+</ul>
+</li>
+<li> <a href="https://favicon.io/" target="_blank" rel=”noopener”>Favicon</a>
+<ul>
+<li>Icon lamp.</li>
+</ul>
+</li>
+    <li><a href="https://avemateiu.com/"  target="_blank" rel=”noopener”> Ave Mateiu (pallete)</a></li>
+<ul>
+<li>Colors.</li>
+</ul>
+</li>
+</ul>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<h2>Acknowledgements</h2>
+<ul>
+<li>To my husband and my daughter for their patience during all the long hours I spent at the computer.</li>
+</ul>
+<ul>
+<li>The Code institute team for the support and attention provided to me these past months.</li>
+</ul>
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
