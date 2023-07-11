@@ -385,6 +385,9 @@ display: none;
     display: none;
   }
   
+  #exit2{
+    display: none;
+  }
   #congrats{
     width: 19rem;
     height: auto;
@@ -410,91 +413,3 @@ display: none;
   }
 }
   
-
-
-/* Game - page 
-.main {
-  text-align: center;
-  background-color: #fff;
-  border-radius: 20px;
-  width: 300px;
-  margin: 40px auto;
-  padding: 25px;
-}
-
-.logo-game {
-  width: 150px
-}
-
-h1 {
-  font-size: 35px;
-  margin: 10px 0;
-}
-
-.welcome {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.progress {
-  font-size: 19px;
-  font-weight: bold;
-  color: #09799e;
-  margin-bottom: 10px;
-}
-
-#title{
-  font-size: 20px;
-}
-
-.container-answers {
-  list-style-type: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.answers {
-  padding: 15px;
-  margin-bottom: 10px;
-  font-size: 18px;
-  background-color: #f5f5f5;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 10px;
-}
-
-.answers:hover {
-  background-color: #e0e0e0;
-}
-
-.answers.correct {
-  background-color: #b6e9b7;
-}
-
-.answers.incorrect {
-  background-color: #eeb4ba;
-}
-
-.btn-exit {
-  margin-right: 10px;
-}
-
-.hidden {
-  display: none !important;
-}
-
-#congrats{
-  border-radius: 25px;
-  padding: 25px;
-  background-color: #c3e0e4;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 30px;
-}
-
-#congrats h2{
-  color: #b97a1a;
-  padding-bottom: 10px;
-}
-*/
