@@ -55,7 +55,7 @@ body{
   font-size: 18px;
   text-align: center;
   padding: 20px 15px;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 #form-game{
@@ -334,8 +334,8 @@ display: none;
     
   /* game.html*/
   main{
-        height: auto;
-        margin: 10px 20px;
+    height: auto;
+    margin: 10px 20px;
   } 
   
   header {
@@ -359,7 +359,6 @@ display: none;
     justify-items: auto;
     line-height: 5px;
     height: 45px;
-    padding-left: 45px;
   }
   
   #title {
