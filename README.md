@@ -59,10 +59,12 @@
 </ul>
 </ul>
 
+<h3>Flowchart</h3>
 
-<h3>Wireframes</h3>
+![Flowchart](assets/images/flowchart.png)
 
 <br>
+<h3>Wireframes</h3>
 <p>Mobile Wireframe</p>
 
 ![Mobile Wireframe](assets/images/Wireframe.png)
@@ -73,7 +75,6 @@
 ![Home Page Wireframe](assets/images/desktop.png)
 
 <br>
-
 <h2>Features</h2>
 
 <h3>Responsiveness</h3>
