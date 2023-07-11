@@ -175,11 +175,14 @@
    document.getElementById('questions-qty').textContent = totalQuestions;
  
    const mainDiv = document.getElementsByClassName('main')[0];
-  mainDiv.classList.add('hidden');
+   mainDiv.classList.add('hidden');
 
    document.getElementById('hello').classList.add('hidden');
    document.getElementById('congrats').classList.remove('hidden');
- 
+
+  // Remove o atributo "hidden" dos botões "Restart" e "Exit"
+   document.getElementById('congrats-btn').classList.remove('hidden');
+  
    // Esconde o botão "Next"
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
