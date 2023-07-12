@@ -1,18 +1,18 @@
  // Collect username from index.html page -----------------------------------------------------------------
 
- const btnInitial = document.querySelector('.initial-btn');
- const collectName = document.querySelector('.user');
+const btnInitial = document.querySelector('.initial-btn');
+const collectName = document.querySelector('.username');
 
-  const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams.get('username'))
+const urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams.get('username'));
   
  
-     btnInitial.addEventListener('click', () => {
-     const collectName = document.querySelector('.userName').value; 
-     localStorage.setItem('userName', collectName); 
-     })
+  btnInitial.addEventListener('click', () => {
+  const collectName = document.querySelector('.username').value; 
+  localStorage.setItem('username', collectName); 
+  });
  
-     if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
+  if(collectName !== null) collectName.textContent = localStorage.getItem('username');
 
 
 //aceitar somente letras input usuario
@@ -91,7 +91,7 @@
      const j = Math.floor(Math.random() * (i + 1));
      [questions[i], questions[j]] = [questions[j], questions[i]];
    }
-   return questions
+   return questions;
  }
  
  shuffleQuestions();
