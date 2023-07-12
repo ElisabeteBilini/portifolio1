@@ -1,18 +1,18 @@
  // Collect username from index.html page -----------------------------------------------------------------
 
 const btnInitial = document.querySelector('.initial-btn');
-const collectName = document.querySelector('.username');
+const collectName = document.querySelector('.user');
 
 const urlParams = new URLSearchParams(window.location.search);
   console.log(urlParams.get('username'));
   
  
   btnInitial.addEventListener('click', () => {
-  const collectName = document.querySelector('.username').value; 
-  localStorage.setItem('username', collectName); 
+  const collectName = document.querySelector('.userName').value; 
+  localStorage.setItem('userName', collectName); 
   });
  
-  if(collectName !== null) collectName.textContent = localStorage.getItem('username');
+  if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
 
 
 //aceitar somente letras input usuario
