@@ -8,7 +8,7 @@ const urlParams = new URLSearchParams(window.location.search);
   
  
   btnInitial.addEventListener('click', () => {
-  const collectName = document.querySelector('.userName').value; 
+  const collectName = document.querySelector('.user').value; 
   localStorage.setItem('userName', collectName); 
   });
  
