@@ -121,7 +121,7 @@ function lettersOnly() {
  // Variáveis
  let currentQuestion = 0;
  let score = 0;
-
+ const messageFinal = document.getElementById('message');
  const nextButton = document.getElementsByClassName('btn-next')[0];
  
  
@@ -208,6 +208,7 @@ function lettersOnly() {
    // Esconde o botão "Next"
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
+   messageFinal.classList.add('hidden');
 
  }
  
@@ -221,13 +222,16 @@ function lettersOnly() {
  
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
+   messageFinal.classList.add('hidden');
  
    displayQuestion();
  }
  
  // Sair do jogo
  function exitGame() {
-  window.location.href = 'index.html';
+  document.getElementById('congrats').classList.add('hidden');
+  document.getElementsByClassName('main')[0].classList.add('hidden');
+  messageFinal.classList.remove('hidden');
  }
  
  // Jogar novamente
@@ -240,6 +244,9 @@ function lettersOnly() {
  
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
+
+   const messageFinal = document.getElementById('message');
+   messageFinal.classList.add('hidden');
  
    displayQuestion();
  }
@@ -254,7 +261,7 @@ function lettersOnly() {
  
   //  const nextButton = document.getElementsByClassName('btn-next')[0];
   //  nextButton.addEventListener('click', nextQuestion);
- 
+
    const restartButton = document.getElementsByClassName('btn-exit')[0];
    restartButton.addEventListener('click', restartQuiz);
  
@@ -264,8 +271,10 @@ function lettersOnly() {
    const playAgainButton = document.getElementsByClassName('btn-play')[0];
    playAgainButton.addEventListener('click', playAgain);
  
+   document.getElementById('message').classList.add('hidden'); 
    document.getElementById('footer-btn').classList.remove('hidden');
    document.getElementById('congrats-btn').classList.add('hidden');
+  
  }
 
  window.addEventListener('load', startQuiz);

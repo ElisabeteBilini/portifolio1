@@ -279,6 +279,31 @@ display: none;
     gap: 20px;
 }
 
+#message{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 280px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+#message h2{
+  font-size: 25px;
+  color: #000;
+  padding-bottom: 2vh;
+  padding-top: 1vh;
+}
+
+#message p{
+  font-size: 18px;
+  color: #000;
+  padding-bottom: 1vh;
+}
+
 
 /* Mobiles */
 @media screen and (max-width: 480px) {
