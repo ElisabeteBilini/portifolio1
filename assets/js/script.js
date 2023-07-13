@@ -8,18 +8,19 @@ const urlParams = new URLSearchParams(window.location.search);
   
  
   btnInitial.addEventListener('click', () => {
-  const collectName = document.querySelector('.user').value; 
+  const collectName = document.querySelector('.userName').value; 
   localStorage.setItem('userName', collectName); 
   });
  
   if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
 
-
-function lettersOnly(event) {
-  const input = event.target;
+//somnete lettras input
+function lettersOnly() {
+  const input = document.querySelector('.userName');
   input.value = input.value.replace(/[^a-zA-Z]/g, '');
-
-  if (input.value !== event.target.value) {
+  
+  if (input.value.match(/[^a-zA-Z]/g)) {
+    evt.preventDefault();
     alert("Enter letters only.");
   }
 }
@@ -88,13 +89,15 @@ function lettersOnly(event) {
    }
    return questions;
  }
- 
- shuffleQuestions();
+  shuffleQuestions();
  
  // Variáveis
  let currentQuestion = 0;
  let score = 0;
+
  const messageFinal = document.getElementById('message');
+ messageFinal.classList.add('hidden');
+
  const nextButton = document.getElementsByClassName('btn-next')[0];
  
  
@@ -104,7 +107,7 @@ function lettersOnly(event) {
   const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
   
   // Add eventListener for next button only when displayQuestion called
-  nextButton.addEventListener('click', nextQuestion);
+
   
   const current = questions[currentQuestion];
   questionElement.textContent = current.title;
@@ -181,7 +184,6 @@ function lettersOnly(event) {
    // Esconde o botão "Next"
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
-   messageFinal.classList.add('hidden');
 
  }
  
@@ -195,8 +197,7 @@ function lettersOnly(event) {
  
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
-   messageFinal.classList.add('hidden');
- 
+   
    displayQuestion();
  }
  
@@ -218,16 +219,15 @@ function lettersOnly(event) {
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
 
-   const messageFinal = document.getElementById('message');
-   messageFinal.classList.add('hidden');
- 
-   displayQuestion();
+  displayQuestion();
  }
 
  
  // Inicia o quiz
  function startQuiz() {
    displayQuestion();
+
+   nextButton.addEventListener('click', nextQuestion);
  
    const totalQuestionsElement = document.getElementsByClassName('totalQuestions')[0];
    totalQuestionsElement.textContent = questions.length;
@@ -243,8 +243,7 @@ function lettersOnly(event) {
  
    const playAgainButton = document.getElementsByClassName('btn-play')[0];
    playAgainButton.addEventListener('click', playAgain);
- 
-   document.getElementById('message').classList.add('hidden'); 
+
    document.getElementById('footer-btn').classList.remove('hidden');
    document.getElementById('congrats-btn').classList.add('hidden');
   
