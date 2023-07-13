@@ -8,47 +8,12 @@ const urlParams = new URLSearchParams(window.location.search);
   
  
   btnInitial.addEventListener('click', () => {
-  const collectName = document.querySelector('.userName').value; 
+  const collectName = document.querySelector('.user').value; 
   localStorage.setItem('userName', collectName); 
   });
  
   if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
 
-
-/*aceitar somente letras input usuario
-     function lettersOnly(evt) {
-    evt = (evt) ? evt : event;
-    var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
-        ((evt.which) ? evt.which : 0));
-    if (charCode > 31 && (charCode < 65 || charCode > 90) &&
-        (charCode < 97 || charCode > 122)) {
-        alert("Enter letters only.");
-        return false;
-    }
-    return true;
-}
- 
- 
-
-function lettersOnly(evt) {
-  const charCode = evt.which ? evt.which : evt.keyCode;
-  const charTyped = String.fromCharCode(charCode);
-  const pattern = /^[A-Za-z]+$/;
-  if (!pattern.test(charTyped)) {
-    evt.preventDefault();
-    alert("Enter letters only.");
-  }
-}
-
-function lettersOnly(event) {
-  const input = document.querySelector('.userName');
-  input.value = input.value.replace(/[^a-zA-Z]/g, '');
-  
-  if (input.value.match(/[^a-zA-Z]/g)) {
-    alert("Enter letters only.");
-  }
-}
-*/
 
 function lettersOnly(event) {
   const input = event.target;
