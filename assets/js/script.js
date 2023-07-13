@@ -39,9 +39,8 @@ function lettersOnly(evt) {
     alert("Enter letters only.");
   }
 }
-*/
 
-function lettersOnly() {
+function lettersOnly(event) {
   const input = document.querySelector('.userName');
   input.value = input.value.replace(/[^a-zA-Z]/g, '');
   
@@ -49,7 +48,16 @@ function lettersOnly() {
     alert("Enter letters only.");
   }
 }
+*/
 
+function lettersOnly(event) {
+  const input = event.target;
+  input.value = input.value.replace(/[^a-zA-Z]/g, '');
+
+  if (input.value !== event.target.value) {
+    alert("Enter letters only.");
+  }
+}
 
  //-----------------------------------------GAME STRUCTURE---------------------------------------------------
  
