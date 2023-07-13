@@ -381,13 +381,6 @@ display: none;
     font-size: 20px;
   }
 
-  #exit{
-    display: none;
-  }
-  
-  #exit2{
-    display: none;
-  }
   #congrats{
     width: 19rem;
     height: auto;

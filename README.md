@@ -109,7 +109,7 @@
 <ul>
 <li>Game screen with title and answers.</li>
 <li>If the selected answer is correct the background color will be green, if the wrong answer is selected the color will be red and the right answer will appear in green. </li>
-<li>Next button to advance the questions, restart button (returns to the first screen) and exit button (closes the browser, in the case of cell phones and tablets there is no this button).</li>
+<li>Next button to advance the questions, restart button (returns to the first screen) and exit button returns the login screen.</li>
 </ul>
 
 ![index](assets/images/questions.png)
