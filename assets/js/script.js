@@ -28,7 +28,7 @@ const urlParams = new URLSearchParams(window.location.search);
     return true;
 }
  
- */
+ 
 
 function lettersOnly(evt) {
   const charCode = evt.which ? evt.which : evt.keyCode;
@@ -38,6 +38,12 @@ function lettersOnly(evt) {
     evt.preventDefault();
     alert("Enter letters only.");
   }
+}
+*/
+
+function lettersOnly() {
+  const input = document.querySelector('.userName');
+  input.value = input.value.replace(/[^a-zA-Z]/g, '');
 }
  //-----------------------------------------GAME STRUCTURE---------------------------------------------------
  
