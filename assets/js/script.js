@@ -205,7 +205,7 @@ const urlParams = new URLSearchParams(window.location.search);
  
  // Sair do jogo
  function exitGame() {
-   window.close();
+  window.location.href = 'index.html';
  }
  
  // Jogar novamente
