@@ -44,7 +44,13 @@ function lettersOnly(evt) {
 function lettersOnly() {
   const input = document.querySelector('.userName');
   input.value = input.value.replace(/[^a-zA-Z]/g, '');
+  
+  if (input.value.match(/[^a-zA-Z]/g)) {
+    alert("Enter letters only.");
+  }
 }
+
+
  //-----------------------------------------GAME STRUCTURE---------------------------------------------------
  
  // Array de perguntas e respostas 
