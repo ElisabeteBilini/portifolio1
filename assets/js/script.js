@@ -15,7 +15,7 @@ const urlParams = new URLSearchParams(window.location.search);
   if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
 
 
-//aceitar somente letras input usuario
+/*aceitar somente letras input usuario
      function lettersOnly(evt) {
     evt = (evt) ? evt : event;
     var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
@@ -28,7 +28,17 @@ const urlParams = new URLSearchParams(window.location.search);
     return true;
 }
  
- 
+ */
+
+function lettersOnly(evt) {
+  const charCode = evt.which ? evt.which : evt.keyCode;
+  const charTyped = String.fromCharCode(charCode);
+  const pattern = /^[A-Za-z]+$/;
+  if (!pattern.test(charTyped)) {
+    evt.preventDefault();
+    alert("Enter letters only.");
+  }
+}
  //-----------------------------------------GAME STRUCTURE---------------------------------------------------
  
  // Array de perguntas e respostas 
