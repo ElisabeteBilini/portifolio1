@@ -82,22 +82,19 @@ function lettersOnly() {
  ];
  
  // Função para embaralhar as perguntas
- function shuffleQuestions() {
-   for (let i = questions.length - 1; i > 0; i--) {
-     const j = Math.floor(Math.random() * (i + 1));
-     [questions[i], questions[j]] = [questions[j], questions[i]];
-   }
+function shuffleQuestions() {
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]];
+  }
    return questions;
- }
-  shuffleQuestions();
+}
+shuffleQuestions();
  
  // Variáveis
  let currentQuestion = 0;
  let score = 0;
-
  const messageFinal = document.getElementById('message');
- messageFinal.classList.add('hidden');
-
  const nextButton = document.getElementsByClassName('btn-next')[0];
  
  
@@ -232,10 +229,7 @@ function lettersOnly() {
    const totalQuestionsElement = document.getElementsByClassName('totalQuestions')[0];
    totalQuestionsElement.textContent = questions.length;
  
-  //  const nextButton = document.getElementsByClassName('btn-next')[0];
-  //  nextButton.addEventListener('click', nextQuestion);
-
-   const restartButton = document.getElementsByClassName('btn-exit')[0];
+   const restartButton = document.getElementsByClassName('btn-restart')[0];
    restartButton.addEventListener('click', restartQuiz);
  
    const exitButton = document.getElementsByClassName('btn-exit')[1];
