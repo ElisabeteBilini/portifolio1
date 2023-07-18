@@ -16,14 +16,16 @@ loginPage.classList.add('hidden');
  
   if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
 
-function lettersOnly() {
-  const input = document.querySelector('.userName');
+function lettersOnly(event) {
+  const input = document.getElementById('username');
   input.value = input.value.replace(/[^a-zA-Z]/g, '');
   
-  if (input.value.match(/[^a-zA-Z]/g)) {
-    evt.preventDefault();
+  if (!input.value.match(/^[a-zA-Z]+$/)) {
+    event.preventDefault();
     alert("Enter letters only.");
   }
+
+  return true;
 }
 
  // Game Page
