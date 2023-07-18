@@ -1,20 +1,20 @@
- // Collect username from index.html page -----------------------------------------------------------------
-
+ // Login Page
 const btnInitial = document.querySelector('.initial-btn');
 const collectName = document.querySelector('.user');
-
-const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams.get('username'));
-  
+const loginPage = document.querySelector('.login');
+const mainPage = document.querySelector('.main');
+const congratsPage = document.getElementById('congrats');
+const messagePage = document.getElementById('message');
  
-  btnInitial.addEventListener('click', () => {
-  const collectName = document.querySelector('.userName').value; 
-  localStorage.setItem('userName', collectName); 
-  });
+btnInitial.addEventListener('click', () => {
+const collectName = document.querySelector('.userName').value; 
+localStorage.setItem('userName', collectName); 
+mainPage.classList.remove('hidden');
+loginPage.classList.add('hidden');
+});
  
   if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
 
-//somnete lettras input
 function lettersOnly() {
   const input = document.querySelector('.userName');
   input.value = input.value.replace(/[^a-zA-Z]/g, '');
@@ -25,9 +25,9 @@ function lettersOnly() {
   }
 }
 
- //-----------------------------------------GAME STRUCTURE---------------------------------------------------
+ // Game Page
  
- // Array de perguntas e respostas 
+ // Array questions and answers 
  const questions = [
    {
      title: 'The Cold War was between the United States and what other world power?',
@@ -81,7 +81,7 @@ function lettersOnly() {
    }
  ];
  
- // Função para embaralhar as perguntas
+ // shuffle questions
 function shuffleQuestions() {
   for (let i = questions.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -91,7 +91,7 @@ function shuffleQuestions() {
 }
 shuffleQuestions();
  
- // Variáveis
+ // Variables
  let currentQuestion = 0;
  let score = 0;
  const messageFinal = document.getElementById('message');
@@ -102,9 +102,6 @@ shuffleQuestions();
   const questionElement = document.getElementById('title');
   const answersElements = document.getElementsByClassName('answers');
   const numberQuestionElement = document.getElementsByClassName('numberQuestion')[0];
-  
-  // Add eventListener for next button only when displayQuestion called
-
   
   const current = questions[currentQuestion];
   questionElement.textContent = current.title;
@@ -120,7 +117,7 @@ shuffleQuestions();
   numberQuestionElement.textContent = questionNumber <= 10 ? questionNumber : '';
 }
  
- // Função para verificar a resposta
+ // Check answer
  function checkAnswer(event) {
    const selectedAnswer = event.target;
    const selectedAnswerIndex = Array.from(selectedAnswer.parentElement.children).indexOf(selectedAnswer);
@@ -135,21 +132,18 @@ shuffleQuestions();
      correctAnswerElement.classList.add('correct');
    }
  
-   // Desabilita o clique após verificacao
    const answersElements = document.getElementsByClassName('answers');
    for (let i = 0; i < answersElements.length; i++) {
      answersElements[i].removeEventListener('click', checkAnswer);
    }
- 
-   // Botão "Next"
+
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.remove('hidden');
  }
  
- // Avançar para a próxima pergunta ou encerrar o quiz
+ // Next question
  function nextQuestion() {
 
-  // Remove the eventListener so it isn't attached multiple times
   nextButton.removeEventListener('click', nextQuestion);
    currentQuestion++;
  
@@ -160,7 +154,7 @@ shuffleQuestions();
    }
  }
  
- // Encerrar o quiz
+ // Finish quiz
  function finishQuiz() {
    const totalQuestions = questions.length;
    const percentage = (score / totalQuestions) * 100;
@@ -174,17 +168,14 @@ shuffleQuestions();
 
    document.getElementById('hello').classList.add('hidden');
    document.getElementById('congrats').classList.remove('hidden');
-
-  // Remove o atributo "hidden" dos botões "Restart" e "Exit"
    document.getElementById('congrats-btn').classList.remove('hidden');
-  
-   // Esconde o botão "Next"
+
    const nextButton = document.getElementsByClassName('btn-next')[0];
    nextButton.classList.add('hidden');
 
  }
  
- // Reiniciar o quiz
+ // Restart quiz
  function restartQuiz() {
    currentQuestion = 0;
    score = 0;
@@ -198,14 +189,14 @@ shuffleQuestions();
    displayQuestion();
  }
  
- // Sair do jogo
+ // Exit game
  function exitGame() {
   document.getElementById('congrats').classList.add('hidden');
   document.getElementsByClassName('main')[0].classList.add('hidden');
   messageFinal.classList.remove('hidden');
  }
  
- // Jogar novamente
+ // Play again
  function playAgain() {
    currentQuestion = 0;
    score = 0;
@@ -220,7 +211,7 @@ shuffleQuestions();
  }
 
  
- // Inicia o quiz
+ // Start quiz
  function startQuiz() {
    displayQuestion();
 
@@ -240,7 +231,7 @@ shuffleQuestions();
 
    document.getElementById('footer-btn').classList.remove('hidden');
    document.getElementById('congrats-btn').classList.add('hidden');
-  
+    
  }
 
  window.addEventListener('load', startQuiz);

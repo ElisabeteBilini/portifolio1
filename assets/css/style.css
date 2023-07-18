@@ -22,7 +22,6 @@ body{
 }
 
 .login{
-  display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -308,7 +307,6 @@ display: none;
 @media screen and (max-width: 480px) {
   .login{
     width: 15rem;
-    display: flex; 
     justify-content: center;
     margin-bottom: 10px;
     margin-top: 5px;
