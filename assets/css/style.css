@@ -7,8 +7,7 @@
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/*         Initial screen         */
-/*         INDEX.PAGE         */
+/*        LOGIN.PAGE         */
 body{
   background: #add8e6;
   background-image: url('../images/point.jpg');
@@ -303,7 +302,7 @@ display: none;
 }
 
 
-/* Mobiles */
+/* MOBILES */
 @media screen and (max-width: 480px) {
   .login{
     width: 15rem;
@@ -427,4 +426,12 @@ display: none;
     font-weight: bold;
   }
 }
-  
+
+@media screen and (min-width: 1500px) {
+#congrats{
+  height: auto;
+}
+
+}
+
+
