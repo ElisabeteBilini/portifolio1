@@ -1,13 +1,14 @@
  // Login Page
 const btnInitial = document.querySelector('.initial-btn');
-const collectName = document.querySelector('.user');
+const collectName = document.getElementById('user');
 const loginPage = document.querySelector('.login');
 const mainPage = document.querySelector('.main');
 const congratsPage = document.getElementById('congrats');
 const messagePage = document.getElementById('message');
  
 btnInitial.addEventListener('click', () => {
-const collectName = document.querySelector('.userName').value; 
+const collectName = document.getElementById('username').value; 
+  console.log(collectName);
 localStorage.setItem('userName', collectName); 
 mainPage.classList.remove('hidden');
 loginPage.classList.add('hidden');
