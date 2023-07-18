@@ -7,11 +7,15 @@ const congratsPage = document.getElementById('congrats');
 const messagePage = document.getElementById('message');
  
 btnInitial.addEventListener('click', () => {
-const collectName = document.getElementById('username').value; 
-  console.log(collectName);
-localStorage.setItem('userName', collectName); 
-mainPage.classList.remove('hidden');
-loginPage.classList.add('hidden');
+  const username = document.getElementById('username');
+  if (username) {
+    const collectName = username.value;
+    localStorage.setItem('userName', collectName); // Armazena o nome de usuário no localStorage
+    //console.log(collectName);
+    mainPage.classList.remove('hidden');
+    loginPage.classList.add('hidden');
+    document.querySelector('.user').textContent = collectName; // Exibe o nome de usuário na tela
+  }
 });
  
   if(collectName !== null) collectName.textContent = localStorage.getItem('userName');
